@@ -22,6 +22,12 @@
 
   <div style="height: 100px; display: block;"></div>
   <div>
+    <p>
+      Bienvenido <%=usuario.getNombre()%>
+    </p>
+    <a type="button" class="btn btn-primary" href="<%=request.getContextPath()%>/SessionServlet?action=logout">CerrarSesion</a>
+  </div>
+  <div>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Registrar Servicio</a>
