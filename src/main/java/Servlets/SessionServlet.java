@@ -20,7 +20,7 @@ SessionServlet extends HttpServlet {
 
         switch (action) {
             case "loginform":
-                view = request.getRequestDispatcher("InicioSesion.jsp");
+                view = request.getRequestDispatcher("InicioDeSesion.jsp");
                 view.forward(request, response);
                 break;
             case "registrarse":
