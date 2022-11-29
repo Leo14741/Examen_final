@@ -7,7 +7,7 @@ public class Impresion3D {
     private float alturaDeLaCapa;
     private String material;
     private String urlDeLaImagen;
-    private boolean Autoservicio;
+    private String Autoservicio;
 
     public int getDensidadPieza() {
         return densidadPieza;
@@ -49,11 +49,11 @@ public class Impresion3D {
         this.urlDeLaImagen = urlDeLaImagen;
     }
 
-    public boolean isAutoservicio() {
+    public String getAutoservicio() {
         return Autoservicio;
     }
 
-    public void setAutoservicio(boolean autoservicio) {
+    public void setAutoservicio(String autoservicio) {
         Autoservicio = autoservicio;
     }
 }

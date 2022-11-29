@@ -20,10 +20,9 @@
 </head>
 <body>
 
-<div>
-    <p>Ingrese la información:</p>
+c    <p>Ingrese la información:</p>
     <div class="mb-3">>
-        <select class="form-select" aria-label="Densidad de Pieza">
+        <select class="form-select" aria-label="Densidad de Pieza" name="Densidad">
             <option value="10">10</option>
             <option value="15">15</option>
             <option value="20">20</option>
@@ -34,7 +33,7 @@
     </div>
 
     <div class="mb-3">>
-        <select class="form-select" aria-label="Grosor">
+        <select class="form-select" aria-label="Grosor" name="Grosor">
             <option value="fino">fino</option>
             <option value="normal">normal</option>
             <option value="grueso">grueso</option>
@@ -42,7 +41,7 @@
     </div>
 
     <div class="mb-3">>
-        <select class="form-select" aria-label="Altura de la Capa">
+        <select class="form-select" aria-label="Altura de la Capa" name="Altura">
             <option value="1">0.1</option>
             <option value="2">0.2</option>
             <option value="3">0.3</option>
@@ -51,7 +50,7 @@
     </div>
 
     <div class="mb-3">>
-        <select class="form-select" aria-label="Material">
+        <select class="form-select" aria-label="Material" name="Material">
             <option value="abs">abs</option>
             <option value="pla">pla</option>
             <option value="flexible">flexible</option>
@@ -60,17 +59,17 @@
 
     <div class="mb-3">
         <label for="URLDeLaImagen" class="form-label">URL de la Imagen</label>
-        <input type="text" class="form-control" id="URLDeLaImagen" >
+        <input type="text" class="form-control" id="URLDeLaImagen" name="URL">
     </div>
 
     <div class="mb-3">>
-        <select class="form-select" aria-label="Autoservicio">
+        <select class="form-select" aria-label="Autoservicio" name="Autoservicio">
             <option value="Si">Si</option>
             <option value="No">No</option>
         </select>
     </div>
 
-</div>
+</form>
 
 </body>
 </html>

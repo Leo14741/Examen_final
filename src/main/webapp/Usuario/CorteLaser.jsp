@@ -19,25 +19,25 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-<div>
+<form method="POST" action="<%=request.getContextPath()%>/UsuarioServlet?action=crearImpresion">
     <p>Ingrese la información:</p>
 
     <div class="mb-3">>
-        <select class="form-select" aria-label="Grosor">
+        <select class="form-select" aria-label="Grosor" name="Grosor">
             <option value="fino">fino</option>
             <option value="grueso">grueso</option>
         </select>
     </div>
 
     <div class="mb-3">>
-        <select class="form-select" aria-label="Color de la Linea">
+        <select class="form-select" aria-label="Color de la Linea" name="Color">
             <option value="rojo">rojo</option>
             <option value="negro">negro</option>
         </select>
     </div>
 
     <div class="mb-3">>
-        <select class="form-select" aria-label="Material">
+        <select class="form-select" aria-label="Material" name="Material">
             <option value="acrilico">acrilico</option>
             <option value="mdf">mdf</option>
             <option value="carton">carton</option>
@@ -45,21 +45,16 @@
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Dimensiones</label>
-
-        <label for="Ancho" class="form-label">Ancho</label>
-        <input type="email" class="form-control" id="Ancho" placeholder="Ingrese el Ancho">
-
-        <label for="Largo" class="form-label">Largo</label>
-        <input type="email" class="form-control" id="Largo" placeholder="Ingrese el Largo">
+        <label class="form-label" name="Dimensiones">Dimensiones</label>
+        <input type="email" class="form-control" id="Largo" placeholder="Ingrese las Dimensiones">
 
     </div>
 
     <div class="mb-3">
         <label for="URLDeLaImagen" class="form-label">URL de la Imagen</label>
-        <input type="text" class="form-control" id="URLDeLaImagen" >
+        <input type="text" class="form-control" id="URLDeLaImagen" name="URL">
     </div>
 
-</div>
+</form>
 </body>
 </html>
