@@ -8,7 +8,7 @@ import Beans.Usuarios;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class DaosUsuario {
+public class DaosUsuario extends DaoBase{
 
     private Connection connection;
     public Usuarios obtenerUsuario(String correoUsuario, String contrasenaUsuario){
