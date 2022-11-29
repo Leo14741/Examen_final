@@ -43,7 +43,8 @@
                         <div>
                             <a href="<%=request.getContextPath()%>/SessionServlet?action=registrarse"> Registrarse </a>
                         </div>
-                    </div>                </form>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
