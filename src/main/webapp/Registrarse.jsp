@@ -27,7 +27,7 @@
             <h3 class="card-title text-center">Registrarse</h3>
             <div class="card-text">
                 <!--<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-                <form method="post">
+                <form method="post" action="<%=request.getContextPath()%>/SessionServlet">
                     <!-- to error: add class "has-danger" -->
 
                     <div class="form-group">

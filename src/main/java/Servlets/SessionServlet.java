@@ -43,5 +43,15 @@ SessionServlet extends HttpServlet {
         String password = request.getParameter("inputPassword");
 
         Usuarios usuarios = usuarioDaos.validarUsuarioPassword(email,password);
+
+        if(usuarios != null){
+            HttpSession session = request.getSession();
+            session.setAttribute("usuarioSession", usuarios);
+
+            response.sendRedirect(request.getContextPath());
+        }else{
+            response.sendRedirect(request.getContextPath() + "/SessionServlet?error");
+        }
+
     }
 }

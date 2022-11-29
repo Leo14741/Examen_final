@@ -20,18 +20,20 @@
             <h3 class="card-title text-center">Login</h3>
             <div class="card-text">
                 <!--<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-                <form method="post">
+                <form method="post" action="<%=request.getContextPath()%>/SessionServlet">
                     <!-- to error: add class "has-danger" -->
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email</label>
                         <div style="height: 5px; display: block;"></div>
-                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" name="inputEmail" placeholder="Put your username">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1"
+                               name="inputEmail" placeholder="Put your username">
                     </div>
                     <div style="height: 10px; display: block;"></div>
                     <div class="form-group">
                         <label for="exampleInputPassword1" align="center">Password</label>
                         <div style="height: 5px; display: block;"></div>
-                        <input type="password" class="form-control form-control-sm" id="exampleInputPassword1" name="inputPassword" placeholder="Put your password">
+                        <input type="password" class="form-control form-control-sm" id="exampleInputPassword1"
+                               name="inputPassword" placeholder="Put your password">
                     </div>
                     <% if (request.getParameter("error") != null) { %>
                     <div style="height: 5px; display: block;"></div>
