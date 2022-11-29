@@ -11,18 +11,29 @@ public class DaosUsuario {
     public Usuarios obtenerUsuario(String correoUsuario, String contrasenaUsuario){
         Usuarios usuario = new Usuarios();
 
-        String sql="";
+        String sql="SELECT * FROM Usuarios u\n" +
+                "inner join TipoUsuarios\n" +
+                "on TipoUsuarios.idTipoUsuarios = u.TipoUsuarios_idTipoUsuarios\n" +
+                "where (correo=?, contrasenia=?);";
 
         try (Connection connection = this.getConnection();
              PreparedStatement pstmt = connection.prepareStatement(sql)){
+            pstmt.setString(1, correoUsuario);
+            pstmt.setString(2, contrasenaUsuario);
 
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+
+                usuario.setCorreoUsuario(rs.getString("correo"));
+                usuario.setContrasenaUsuario(rs.getString("contrasenia"));
+
+            }
 
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-
-        return usuario;
+        return(usuario);
     }
     public Usuarios validarUsuarioPassword(String email, String password) {
 
