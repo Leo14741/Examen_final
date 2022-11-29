@@ -21,6 +21,8 @@ public class DaosUsuario {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+
+        return usuario;
     }
     public Usuarios validarUsuarioPassword(String email, String password) {
 

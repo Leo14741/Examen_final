@@ -70,6 +70,7 @@
                     </div>
                     <div style="height: 10px; display: block;"></div>
 
+
                     <div class="form-group">
                         <label for="exampleInputTipo">Tipo de Usuario:</label>
                         <div style="height: 5px; display: block;"></div>
@@ -77,6 +78,14 @@
                                id="exampleInputTipo" name="inputTipo" placeholder="Ingrese su Tipo de Usuario">
                     </div>
                     <div style="height: 10px; display: block;"></div>
+
+                    <% if (request.getParameter("errorContrasenas") != null) { %>
+                    <div class="text-danger mb-2">Las contraseñas no son iguales.</div>
+                    <% } %>
+
+                    <% if (request.getParameter("errorCorreo") != null) { %>
+                    <div class="text-danger mb-2">Este correo ya existe.</div>
+                    <% } %>
 
                     <div align="center">
                         <button type="submit" class="btn btn-primary btn-block">Sign in</button>
